@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<section>
+  <div class="movie-container">
+    <div class="container-top">
+      <h2>Tekrar hoş geldiniz! Sınırsız film, dizi ve çok daha fazlası</h2>
+      <h1 style="font-size: 50px;">İstediğiniz yerde izleyin. İstediğiniz zaman iptal edin.</h1>
+      <a routerLink="" class="btn">
+        <h5>Kayıdı Tamamlayın</h5>
+      </a>
+    </div>
+
+
+
+
+    <div class="info-box" [class.open]="isOpen">
+      <div class="info-header">
+        <h1>Netflix nedir?</h1>
+        <button class="toggle-btn" (click)="toggleInfoBox()">{{ isOpen ? '×' : '+' }}</button>
+      </div>
+      <div class="info-content">
+        <p>
+          Netflix; internet bağlantılı binlerce cihazda ödüllü diziler, filmler, animeler, belgeseller ve daha fazlasını içeren geniş bir arşiv sunan bir streaming hizmetidir.
+        </p>
+        <p>
+          Tek bir reklam olmadan, istediğiniz kadar, istediğiniz zaman izleyebilirsiniz - hepsi aylık düşük bir ücret karşılığında. Her zaman keşfedilecek yeni bir şeyler var, üstelik her hafta yeni diziler ve filmler ekleniyor!
+        </p>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</section>

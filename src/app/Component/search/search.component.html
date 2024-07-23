@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="movie-container">
+  <div class="container-top">
+    <h1>Welcome to the Movie App to make surf!</h1>
+    <input #movieTitle type="text" placeholder="Enter movie title">
+    <button class="btn" (click)="searchMovie(movieTitle.value)">Search</button>
+
+    <div *ngIf="movie" class="movie-section">
+      <div class="movie-image">
+        <img [src]="posterUrl" alt="{{ movie.Title }} poster">
+      </div>
+      <div class="movie-text">
+        <h2>{{ movie.Title }}</h2>
+        <p>{{ movie.Plot }}</p>
+        <p>Year: {{ movie.Year }}</p>
+        <p>Rating: {{ movie.imdbRating }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
